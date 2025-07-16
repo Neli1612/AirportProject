@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f0f0f0;
+  /*padding: 20px;*/
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #003366;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header .logo {
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-right: 50px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #005599;
+}
+
+nav ul ul li {
+  width: 150px;
+}
+
+
+table { 
+    border-collapse: collapse;
+    width: 95%; 
+    margin-bottom: 30px; 
+    background: #fff;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: center; 
+}
+
+th { 
+    background-color: #4482C1; 
+    color: white; /*#0077cc*/
+}
+
+h2 {
+     color: #4482C1;
+     font-size: 40px; 
+     margin-top: 100px;
+     margin-left: 55px; 
+    }
+
+form { 
+    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-left: 40px; 
+}
+
+input, select {
+    width: 150px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4482C1;
+    color: white;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+footer {
+  margin-top: 258px;
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
