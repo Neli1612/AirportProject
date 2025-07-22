@@ -59,44 +59,50 @@ nav ul ul li {
   width: 150px;
 }
 
-h2 {
-     color: #4482C1;
-     font-size: 40px; 
-     margin-top: 100px;
-     margin-left: 55px; 
-    }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
+.cont{
+    background-image: linear-gradient(to top,rgba(255,0,0,0),rgb(14,134,212));
 }
 
-img {
+.hero {
     
-    height: 550px;
-    display: block;
-    margin: auto;
-
+    height: 200px;
+    padding-top: 100px;
 }
 
-.marker {
-  width: 20px; height: 20px;
-  /*background: red;
-  border-radius:50%;*/
-  cursor: pointer;
+
+
+.option {
+  background: #f0f0f0;  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #b0c4de;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 60px;
+  color: #333;
+  font-family: Arial, sans-serif;
 }
-.tooltip {
-  display: none;
-  position: absolute;
-  top: -20px; left: 30px;
-  background: black; color: white;
-  padding: 2px 5px; border-radius: 3px;
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px dotted white;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
-.marker:hover .tooltip {
-  display: block;
+
+.transport h3 {
+  color: #3b5998;
+  margin-top: 15px;
+}
+
+.transport p {
+  margin-left: 10px;
+  line-height: 1.5;
 }
 
 
@@ -105,5 +111,4 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 200px;
 }
