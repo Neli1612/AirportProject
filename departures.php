@@ -70,12 +70,23 @@ form { margin-bottom: 20px; }
         <ul>
           <li><a href="arrivals.php">Arrivals</a></li>
           <li><a href="departures.php">Departures</a></li>
-          <li><a href="#">Airlines</a></li>
         </ul>
       </li>
-      <li><a href="#">Transport</a></li>
-      <li><a href="#">Airport Info</a></li>
-      <li><a href="#">Passengers</a></li>
+      <li><a href="#">Transport</a>
+      <ul>
+          <li><a href="transport.html">To and from airport</a></li>
+          <li><a href="carRental.html">Car Rental</a></li>
+          <li><a href="Parking.html">Parking</a></li>
+        </ul>
+    </li>
+      <li><a href="#">Airport guide</a>
+      <ul>
+          <li><a href="shops.html">Shops</a></li>
+          <li><a href="eat&drink.html">Eat&Drink</a></li>
+          <li><a href="airportMap.html">Airport map</a></li>
+        </ul>
+    </li>
+      <li><a href="#">Passenger info</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>

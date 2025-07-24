@@ -60,7 +60,7 @@ nav ul ul li {
 }
 
 .hero {
-  background: url('plane.webp') no-repeat center/cover;
+  background: url('images/varna-airport.jpg') no-repeat center/cover;
   height: 500px;
   color: white;
   text-align: center;
@@ -72,9 +72,10 @@ nav ul ul li {
   
 }
 
-h3{
+h2{
     padding-left: 50px;
-    padding-top: 50px;
+    padding-top: 100px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 button {
@@ -108,11 +109,11 @@ a {
 }
 
 .weather{
-  width:40%;
-  margin-left:10px;
+  width:35%;
   box-sizing: border-box;
-  margin-left: 100px;
- 
+  margin-left: 140px;
+ background-color: white;
+ border-radius: 10px;
 } 
 
 .weather img{

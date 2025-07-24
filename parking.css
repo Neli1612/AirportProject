@@ -65,22 +65,9 @@ nav ul ul li {
 }
 
 .hero {
-    background: url('images/airport_drone.jpg') no-repeat center/cover;
+    background: url('images/airport_parking.webp') no-repeat center/cover;
     height: 350px;
     padding-top: 100px;
-}
-
-
-
-.option {
-  background: #f0f0f0;  
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 1px solid #b0c4de;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 60px;
-  color: #333;
-  font-family: Arial, sans-serif;
 }
 
 h2 {
@@ -96,16 +83,31 @@ h2 {
   font-size: xx-large;
 }
 
-.transport h3 {
-  color: #3b5998;
-  margin-top: 15px;
+.park {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 
-.transport p {
-  margin-left: 10px;
-  line-height: 1.5;
+p {
+    text-align: center;
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
+img {
+    margin-left: 60px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 footer {
   background: #222;
