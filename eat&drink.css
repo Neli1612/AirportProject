@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f0f0f0; 
+  /*padding: 20px;*/
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #003366;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+}
+
+header .logo {
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-right: 50px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #005599;
+}
+
+nav ul ul li {
+  width: 150px;
+}
+
+
+.cont{
+    background-image: linear-gradient(to top,rgba(255,0,0,0),rgb(14,134,212));
+}
+
+.hero {
+    /*background: url('images/car-rental.png') no-repeat center/cover;*/
+    height: 350px;
+    padding-top: 100px;
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px dotted white;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: white;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: xx-large;
+}
+
+.list {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 20px;
+}
+
+.s1 {
+    width: 96%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 10px;
+}
+
+.s2 {
+    margin-top: 10px;
+    width: 96%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content:space-around;
+}
+
+.shop {
+    width: 35%;
+    height: 260px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+img {
+    margin: 20px;
+    margin: auto;
+    display: block;
+    width: 45%;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
