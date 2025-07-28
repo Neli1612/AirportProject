@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f0f0f0; 
+  /*padding: 20px;*/
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #003366;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  
+}
+
+header .logo {
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  padding-right: 50px;
+}
+
+nav li {
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #005599;
+}
+
+nav ul ul li {
+  width: 150px;
+}
+
+#div1{
+    display: flex;
+}
+
+.contact {
+    width: 50%;
+    height: 500px;
+    display: inline-block;
+    margin: 100px;
+}
+
+#info{
+    margin-left:150px;
+    font-size: large;
+}
+
+#info li{
+    margin: 8px;
+}
+
+label{
+    font-size: large;
+    margin: 8px;
+}
+
+input[type=text], [type=email], [type=tel], [type=date], textarea{
+    width: 300px;
+    padding: 5px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+} 
+
+input[type=submit]{
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    background-color:#3498db;
+    margin-left: 110px;
+    border:none;
+    border-radius: 6px;
+    color:white;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
