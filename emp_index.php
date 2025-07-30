@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperBank</title>
+    <title>Log in</title>
     <link rel="stylesheet" href="emp_index.css">
 </head>
 <body>

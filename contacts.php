@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperBank</title>
+    <title>Contasts</title>
     <link rel="stylesheet" href="contacts.css">
 </head>
 <body>
@@ -22,21 +22,29 @@
           
         </ul>
       </li>
-      <li><a href="#">Transport</a>
+      <li><a href="#">Transport ▾</a>
         <ul>
           <li><a href="transport.html">To and from airport</a></li>
           <li><a href="carRental.html">Car Rental</a></li>
           <li><a href="parking.html">Parking</a></li>
         </ul>
       </li>
-      <li><a href="#">Airport guide</a>
+      <li><a href="#">Airport guide ▾</a>
         <ul>
           <li><a href="shops.html">Shops</a></li>
           <li><a href="eat&drink.html">Eat&Drink</a></li>
           <li><a href="airportMap.html">Airport map</a></li>
+          <li><a href="#">Services ▾</a>
+            <ul>
+          <li><a href="lost&found.html">Lost&Found</a></li>
+          <li><a href="bank&atm.html">Bank&ATM</a></li>
+          <li><a href="vip.html">VIP</a></li>
+          <li><a href="med.html">Medical Services</a></li>
+           </ul>
+          </li>
         </ul>
       </li>
-      <li><a href="#">Passenger info</a>
+      <li><a href="#">Passenger info ▾</a>
         <ul>
           <li><a href="check-in.html">check-in</a></li>
           <li><a href="security.html">Security</a></li>
@@ -51,7 +59,6 @@
         </ul>
       </li>
       <li><a href="contacts.php">Contacts</a></li>
-      <li id="langSelect"><a href="#">Language</a>
         
       </li>
     </ul>

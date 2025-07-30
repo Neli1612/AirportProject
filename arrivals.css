@@ -58,13 +58,19 @@ nav ul ul li {
   width: 150px;
 }
 
+.hero{
+  background: url('images/landing_palne.jpg') no-repeat center/cover;
+    height: 380px;
+    padding-top: 150px;
+}
+
 
 table { 
     border-collapse: collapse;
     width: 95%; 
     margin-bottom: 30px; 
     background: #fff;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-right: 20px; 
 }
 
@@ -80,22 +86,22 @@ th {
 }
 
 h2 {
-     color: #4482C1;
+     color: white; /*#4482C1;*/
      font-size: 40px; 
      margin-top: 100px;
      margin-left: 55px; 
     }
 
 form { 
-    margin-bottom: 40px;
-    margin-top: 40px;
-    margin-left: 40px; 
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 380px;
 }
 
 input, select {
-    width: 150px;
-    height: 40px;
-    margin-right: 20px;
+    width: 200px;
+    height: 50px;
+    margin-right: 40px;
     border: none;
     border-radius: 5px;
     margin-left: 10px;
