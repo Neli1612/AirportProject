@@ -16,6 +16,9 @@ if ($action == 'insert') {
   foreach ($_POST as $k => $v) {
     if ($k != 'action' && $k != 'table') {
       $keys[] = "`$k`";
+      if ($k == 'emp_password') {
+    $v = password_hash($v, PASSWORD_DEFAULT);
+      } 
       $values[] = "'" . mysqli_real_escape_string($conn, $v) . "'";
     }
   }
@@ -32,6 +35,9 @@ if ($action == 'insert') {
         $pk = $k;
         $pk_val = mysqli_real_escape_string($conn, $v);
       } else {
+        if ($k == 'emp_password' && !empty($v)) {
+          $v = password_hash($v, PASSWORD_DEFAULT);
+        }
         $updates[] = "`$k` = '" . mysqli_real_escape_string($conn, $v) . "'";
       }
     }

@@ -82,16 +82,16 @@
     <div class="contact" >
             
             <form id="contactForm">
-                <label for="fullname">Full name:</label><br>
-                <input type="text" name="fullname"><br>
+                <label for="full_name">Full name:</label><br>
+                <input type="text" name="full_name"><br>
                 <label for="phone">Phone number:</label><br>
                 <input type="tel" name="phone"><br>
                 <label for="email">Email:</label><br>
                 <input type="email" name="email"><br>
-                <label for="message">Message:</label><br>
-                <textarea name="message" rows="10" cols="30"></textarea><br>
-                <label for="mdate">Date:</label><br>
-                <input type="date" name="mdate"><br>    
+                <label for="messageText">Message:</label><br>
+                <textarea name="messageText" rows="10" cols="30"></textarea><br>
+                <!--<label for="mdate">Date:</label><br>
+                <input type="date" name="mdate"><br> -->   
                 <input type="submit" value="Send" id="sendbtn">
             </form>
     </div>

@@ -1,21 +1,26 @@
 <?php
 session_start();
-require 'config.php';
+require_once 'config.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $id = mysqli_real_escape_string($conn, $_POST['id']);
-    $password = $_POST['password'];
+$id_emp = mysqli_real_escape_string($conn, $_POST['id_emp']);
+$password = $_POST['emp_password'];
 
-    // Променено към правилните имена на колоните
-    $query = "SELECT * FROM employee WHERE id_emp='$id' AND empPassword='$password'";
-    $result = mysqli_query($conn, $query);
+$sql = "SELECT * FROM employee WHERE id_emp = '$id_emp' LIMIT 1";
+$result = mysqli_query($conn, $sql);
 
-    if ($result && mysqli_num_rows($result) == 1) {
-        $_SESSION['id'] = $id;
+if ($row = mysqli_fetch_assoc($result)) {
+    if (password_verify($password, $row['emp_password'])) {
+        // Успешен вход
+        $_SESSION['logged_in'] = true;
+        $_SESSION['id_emp'] = $row['id_emp'];
+        $_SESSION['emp_name'] = $row['emp_name']; // ако имаш поле за име
         header("Location: emp_homepage.php");
-        exit();
+        exit;
     } else {
-        echo "Invalid id or password.";
+        echo "❌ Wrong password.";
     }
+} else {
+    echo "❌ No such employee.";
 }
+
 ?>

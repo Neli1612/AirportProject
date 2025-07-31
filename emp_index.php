@@ -17,12 +17,12 @@
         <div id="login">
             <h3>Employee Log in</h3>
             <form action="emp_login.php" method="post">
-                <label for="id">Employee ID:</label><br>
-                <input type="text" name="id"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" name="password" id="pwd"><br>
+                <label for="id_emp">Employee ID:</label><br>
+                <input type="text" name="id_emp"><br>
+                <label for="emp_password">Password:</label><br>
+                <input type="password" name="emp_password" id="pwd"><br>
                 <input type="checkbox" onclick="myFunction()">Show Password<br><br>
-                <input type="Submit" value="Log in"></a>
+                <input type="submit" value="Log in"></a>
             </form>
         </div>
    

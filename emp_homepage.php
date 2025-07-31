@@ -1,12 +1,11 @@
 <?php
-/*session_start();
+session_start();
+require_once 'config.php';
 
-if (!isset($_SESSION['id'])) {
-    header("Location: emp_login.html");
-    exit();
+if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+    header("Location: emp_index.php");
+    exit;
 }
-
-$id = $_SESSION['id'];*/ 
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +48,10 @@ $id = $_SESSION['id'];*/
 
 
    <div class="table" id="table">
-        <div class="fly"><h2>Fly high!</h2></div>
+        <h2 style="margin-left:150px">Welcome, <?= htmlspecialchars($_SESSION['emp_name']) ?></h2>
+        <div class="fly">
+          <h2>Fly high!</h2>
+        </div>
         <img src="images/plane.webp">
         
    </div>
