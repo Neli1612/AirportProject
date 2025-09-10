@@ -98,6 +98,10 @@ p {
     
 }
 
+.foto{
+  padding-left: 120px;
+}
+
 img {
     margin: 20px;
     border-radius: 10px;

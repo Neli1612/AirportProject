@@ -10,17 +10,17 @@ $result = mysqli_query($conn, $sql);
 
 if ($row = mysqli_fetch_assoc($result)) {
     if (password_verify($password, $row['emp_password'])) {
-        // Успешен вход
+        
         $_SESSION['logged_in'] = true;
         $_SESSION['id_emp'] = $row['id_emp'];
-        $_SESSION['emp_name'] = $row['emp_name']; // ако имаш поле за име
+        $_SESSION['emp_name'] = $row['emp_name']; 
         header("Location: emp_homepage.php");
         exit;
     } else {
-        echo "❌ Wrong password.";
+        echo " Wrong password.";
     }
 } else {
-    echo "❌ No such employee.";
+    echo " No such employee.";
 }
 
 ?>

@@ -1,25 +1,33 @@
 <?php
 require_once 'config.php';
-// Настройка за връзка
+
 $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $destinations = $pdo->query("SELECT id_destination, destination FROM Destination ORDER BY destination")
     ->fetchAll(PDO::FETCH_ASSOC);
 
+$airlines = $pdo->query("SELECT id_airline, airline FROM Airline ORDER BY airline")
+    ->fetchAll(PDO::FETCH_ASSOC);    
+
 $date = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
 $dest = isset($_GET['dest']) ? $_GET['dest'] : '';
+$air = isset($_GET['air']) ? $_GET['air'] : '';
 
 $whereArrivals = "DATE(scheduled_arrival) = :date";
 
 $params = [':date' => $date];
 
 if ($dest !== '') {
-    $whereArrivals .= " AND af.id_destination = :dest";
+    $whereArrivals .= " AND d.id_destination = :dest" ;
     $params[':dest'] = $dest;
 }
 
-// Вземаме пристигащи
+if ($air !== '') {
+    $whereArrivals .= " AND aline.id_airline = :air";
+    $params[':air'] = $air;
+}
+
 $sql_arrivals = "
 SELECT a.flight_number, a.scheduled_arrival, a.actual_arrival,
        d.destination, s.flight_status, a.terminal, a.arrival_exit, a.baggageBelt, aline.airline_logo
@@ -135,6 +143,17 @@ form { margin-bottom: 20px; }
             <?php endforeach; ?>
         </select>
     </label>
+    <label>Airline:
+        <select name="air">
+            <option value="">All</option>
+            <?php foreach ($airlines as $a): ?>
+            <option value="<?= $a['id_airline'] ?>" <?= $air == $a['id_airline'] ? 'selected' : '' ?>>
+                <?= htmlspecialchars($a['airline']) ?>
+            </option>
+            <?php endforeach; ?>
+        </select>
+    </label>
+
     <button type="submit">Filter</button>
 </form>
 

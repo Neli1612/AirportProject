@@ -78,11 +78,7 @@ header nav ul li a {
   color: #f1f1f1;
 }
 
-.main {
-  margin-left: 230px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
+
 
 .active {
   background-color: white;
@@ -114,6 +110,7 @@ header nav ul li a {
   margin-bottom: 250px;
   padding: 20px;
   margin-top: 80px;
+  flex-grow: 1;
 }
 
 img{
@@ -150,21 +147,70 @@ img{
 .modal {
   display: none;
   position: fixed;
-  top: 20%;
+  top: 10%;
   left: 30%;
-  width: 40%;
+  width: 30%;
   background: #fff;
   border: 1px solid #ccc;
-  padding: 20px;
   z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 6px;
 }
 
 .modal-content {
-  max-height: 90vh;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  padding: 20px;
 }
 
-#formFields input{
+#formFieldsContainer {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 50vh;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content:flex-start;
+  gap: 10px;
+}
+
+.modal input{
+  width: 250px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+}
+
+.cancel-btn{
+    margin-top:10px;
+    width: 100px;
+    height: 50px;
+    background-color:whitesmoke;
+    border: 1px;
+    border-radius: 6px;
+    color:black;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+/*#formFields input{
   margin: 5px;
   padding: 5px;
   width: 200px;
@@ -174,7 +220,7 @@ img{
   margin: 5px;
   padding: 5px;
   width: 200px;
-}
+}*/
 
 
 button[type=submit]{
@@ -189,7 +235,7 @@ button[type=submit]{
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 200px;
   background: #222;
   color: white;
   text-align: center;

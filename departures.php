@@ -1,22 +1,31 @@
 <?php
 require_once 'config.php';
-// Настройка за връзка
+
 $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $destinations = $pdo->query("SELECT id_destination, destination FROM Destination ORDER BY destination")
     ->fetchAll(PDO::FETCH_ASSOC);
 
+$airlines = $pdo->query("SELECT id_airline, airline FROM Airline ORDER BY airline")
+    ->fetchAll(PDO::FETCH_ASSOC);     
+
 $date = isset($_GET['date']) ? $_GET['date'] : date('Y-m-d');
 $dest = isset($_GET['dest']) ? $_GET['dest'] : '';
+$air = isset($_GET['air']) ? $_GET['air'] : '';
 
 $whereDepartures = "DATE(scheduled_departure) = :date";
 
 $params = [':date' => $date];
 
 if ($dest !== '') {
-    $whereDepartures .= " AND d.id_destination = :dest";
+    $whereDepartures .= " AND dest.id_destination = :dest";
     $params[':dest'] = $dest;
+}
+
+if ($air !== '') {
+    $whereDepartures .= " AND aline.id_airline = :air";
+    $params[':air'] = $air;
 }
 
 $sql_departures = "
@@ -129,6 +138,16 @@ form { margin-bottom: 20px; }
             <?php foreach ($destinations as $d): ?>
             <option value="<?= $d['id_destination'] ?>" <?= $dest == $d['id_destination'] ? 'selected' : '' ?>>
                 <?= htmlspecialchars($d['destination']) ?>
+            </option>
+            <?php endforeach; ?>
+        </select>
+    </label>
+    <label>Airline:
+        <select name="air">
+            <option value="">All</option>
+            <?php foreach ($airlines as $a): ?>
+            <option value="<?= $a['id_airline'] ?>" <?= $air == $a['id_airline'] ? 'selected' : '' ?>>
+                <?= htmlspecialchars($a['airline']) ?>
             </option>
             <?php endforeach; ?>
         </select>

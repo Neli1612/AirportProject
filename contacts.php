@@ -65,21 +65,46 @@
   </nav>
     </header>
 
+ <h2>Contacts</h2>
+  <div class="div1">
 
-<div id="div1">
-    <div class="contact" id="info">
-        <h2>Contacts</h2>
-        <p>Connect with us for more information.</p>
-        <ul>
-            <li>Phone: 089 123 456</li>
-            <li>Email: info@superBank.bg</li>
-            <li>Address: Varna, Levski Bul. 123 </li>
-            <li>Working time: Monday-Friday 08:00-18:00</li>
-            </li>
-        </ul>
-    </div>
+    
 
-    <div class="contact" >
+     <div class="info">
+         
+      <div class="card" style="margin-bottom:10px">
+          <h3>Information</h3>
+          <hr>
+          <p>+359 52 573 323</p>
+        </div>
+       
+
+        <div class="card">
+           <h3>Security</h3>
+          <hr>
+          <p>+359 52 573 389<br>
+             VNSEC01@varna-airport.com</p>
+        </div>
+      
+         <br>
+          
+        <div class="card">
+          <h3>Baggage</h3>
+          <hr>
+          <p>+359 52 573 423<br>
+            ll@varna-airport.bg</p>
+        </div>
+
+        <div class="card">
+          <h3>Border police</h3>
+          <hr>
+          <p>+359 52 573 421<br>
+           airp-gkpp-vn@mvr.bg</p>
+        </div>
+      </div> 
+        
+
+     <div class="contact" >
             
             <form id="contactForm">
                 <label for="full_name">Full name:</label><br>
@@ -89,23 +114,22 @@
                 <label for="email">Email:</label><br>
                 <input type="email" name="email"><br>
                 <label for="messageText">Message:</label><br>
-                <textarea name="messageText" rows="10" cols="30"></textarea><br>
-                <!--<label for="mdate">Date:</label><br>
-                <input type="date" name="mdate"><br> -->   
+                <textarea name="messageText" rows="10" cols="30"></textarea><br>   
                 <input type="submit" value="Send" id="sendbtn">
             </form>
     </div>
+</div>
 
+  <div id="myModal" class="modal">
 
-    <div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
+     
+    <div class="modal-content">
     <span class="close">&times;</span>
     <p>Your message is sent</p>
+    </div>
+
   </div>
 
-</div>
 
 <script>
     document.getElementById("contactForm").addEventListener("submit", function(e) {
@@ -146,7 +170,7 @@ window.onclick = function(event) {
 </script>
 
 
-</div>
+
     <footer>
         <p>&copy; 2025 Varna Airport. All rights reserved.</p>
     </footer>

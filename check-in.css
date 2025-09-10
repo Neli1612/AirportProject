@@ -60,12 +60,12 @@ nav ul ul li {
 }
 
 
-.cont{
+/*.cont{
     background-image: linear-gradient(to top,rgba(255,0,0,0),rgb(14,134,212));
-}
+}*/
 
 .hero {
-    /*background: url('images/car-rental.png') no-repeat center/cover;*/
+    background: url('images/check-in.jpg') no-repeat center/cover;
     height: 350px;
     padding-top: 100px;
 }

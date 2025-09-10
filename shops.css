@@ -65,7 +65,7 @@ nav ul ul li {
 }
 
 .hero {
-    /*background: url('images/car-rental.png') no-repeat center/cover;*/
+    background: url('images/shops.jpg') no-repeat center/cover;
     height: 350px;
     padding-top: 100px;
 }
@@ -79,7 +79,7 @@ h2 {
   color: white;
   width: 300px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 120px;
   font-size: xx-large;
 }
 

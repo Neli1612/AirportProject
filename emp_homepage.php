@@ -58,13 +58,18 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
 
    <div id="popupForm" class="modal">
   <div class="modal-content">
+    <span class="close-btn" onclick="closeForm()">X</span>
     <h3 id="formTitle">Insert Record</h3>
     <form id="dataForm">
+      <div id="formFieldsContainer">
       <div id="formFields"></div>
+      </div>
       <input type="hidden" name="action" id="formAction">
       <input type="hidden" name="table" id="formTable">
+      <div class="modal-buttons">
       <button type="submit">Save</button>
-      <button type="button" onclick="closeForm()">Cancel</button>
+      <button type="button" class="cancel-btn" onclick="closeForm()">Cancel</button>
+      </div>
     </form>
   </div>
  </div>
@@ -74,6 +79,10 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
     </footer>
 
     <script>
+
+      function closeForm() {
+    document.getElementById('popupForm').style.display = 'none';
+  }
         
         var currentTable = '';
         function loadTable(table) {
@@ -147,6 +156,35 @@ function editRow(btn) {
   openForm('update', data);
 }
 
+  function deleteRow(btn) {
+  if (!confirm('Delete this row?')) return;
+
+  var row = btn.parentNode.parentNode;
+  var pkField = row.getElementsByTagName('th')[0] 
+                  ? row.getElementsByTagName('th')[0].innerText 
+                  : row.parentNode.parentNode.querySelector('th').innerText;
+
+  var pk = row.getElementsByTagName('td')[0].innerText;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'actions.php', true);
+  xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      loadTable(currentTable);
+    }
+  };
+  xhr.send('action=delete&table=' + currentTable +
+           '&pk=' + encodeURIComponent(pk) +
+           '&pkField=' + encodeURIComponent(pkField));
+}
+
+
+    </script>
+
+
+
+      <!--
 function deleteRow(btn) {
   if (!confirm('Delete this row?')) return;
   var row = btn.parentNode.parentNode;
@@ -165,11 +203,13 @@ function deleteRow(btn) {
 }
 
 
-    </script>
 
 
 
-      <!--function loadTable(tableName) {
+
+
+
+      function loadTable(tableName) {
           fetch('fetch_table.php?table=' + tableName)
         .then(response => response.text())
         .then(html => {

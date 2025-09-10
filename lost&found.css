@@ -65,7 +65,8 @@ nav ul ul li {
 }
 
 .hero {
-    height: 200px;
+    background: url('images/lf.png') no-repeat center/cover;
+    height: 400px;
     padding-top: 100px;
 }
 

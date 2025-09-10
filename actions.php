@@ -47,7 +47,7 @@ if ($action == 'insert') {
 
 } elseif ($action == 'delete') {
   $pk = mysqli_real_escape_string($conn, $_POST['pk']);
-  $pkField = 'id'; // Приеми, че всяка таблица има `id`
+  $pkField = mysqli_real_escape_string($conn, $_POST['pkField']); 
   $sql = "DELETE FROM `$table` WHERE `$pkField` = '$pk'";
   mysqli_query($conn, $sql);
 }

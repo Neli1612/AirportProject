@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_assoc($result)) {
   </td></tr>";
 }
 echo "</table>";
-echo "<br><button onclick='insertRow()'>Insert New</button>";
+echo "<br><button onclick='insertRow()' >Insert New</button>";
 ?>
 
 
