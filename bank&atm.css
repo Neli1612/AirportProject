@@ -65,7 +65,8 @@ nav ul ul li {
 }
 
 .hero {
-    height: 280px;
+  background: url('images/atm1.jpg') no-repeat center/cover;
+    height: 450px;
     padding-top: 100px;
 }
 

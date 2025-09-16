@@ -86,7 +86,6 @@
              VNSEC01@varna-airport.com</p>
         </div>
       
-         <br>
           
         <div class="card">
           <h3>Baggage</h3>
